@@ -49,6 +49,7 @@
   const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   const input = document.getElementById("photos");
   const upload = document.getElementById("upload");
+  const upload = document.getElementById("upload");
   const filesEl = document.getElementById("files");
   const status = document.getElementById("status");
   const bar = document.getElementById("bar");
@@ -76,7 +77,7 @@
           throw new Error(`${file.name} is over the 50 MB upload limit.`);
         }
         const safe = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
-        const path = `${crypto.randomUUID()}-${safe}`;
+        const path = `uploads/${crypto.randomUUID()}-${safe}`;
         const { error } = await client.storage.from(BUCKET).upload(path, file, {
           cacheControl: "3600",
           upsert: false
