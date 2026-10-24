@@ -42,13 +42,12 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   // Paste these two values from your Supabase project after setup.
-  const SUPABASE_URL = "https://gkzzbbasapbubovlyvuh.supabase.co/rest/v1/";
+  const SUPABASE_URL = "https://gkzzbbasapbubovlyvuh.supabase.co";
   const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdrenpiYmFzYXBidWJvdmx5dnVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4MDMxNjIsImV4cCI6MjEwODM3OTE2Mn0.aZn9tdocUX_4yZ0dnL4tCdbnbLKNM2Nk_1FrmXpGJ_Q";
   const BUCKET = "Wedding-Photos";
 
   const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   const input = document.getElementById("photos");
-  const upload = document.getElementById("upload");
   const upload = document.getElementById("upload");
   const filesEl = document.getElementById("files");
   const status = document.getElementById("status");
