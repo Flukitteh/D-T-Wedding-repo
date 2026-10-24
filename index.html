@@ -72,7 +72,6 @@
 
     try {
       for (const file of files) {
-        // Keep wedding uploads manageable on the free tier.
         if (file.size > 50 * 1024 * 1024) {
           throw new Error(`${file.name} is over the 50 MB upload limit.`);
         }
